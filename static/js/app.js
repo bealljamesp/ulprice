@@ -12,7 +12,7 @@ function pricePrediction(){
     var weekDay = document.getElementById("weekDay");
     var valueWeekDay = weekDay.value;
 
-    d3.json(`http://localhost:5000/api/prediction/${valueOrigin}/${valueDestination}/${valueWeather}/${valueVehType}/${valueWeekDay}`, {
+    d3.json(`https://ulprice.herokuapp.com/api/prediction/${valueOrigin}/${valueDestination}/${valueWeather}/${valueVehType}/${valueWeekDay}`, {
       method:"GET"
     })
     .then(json => {
